@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dauroh Ilmiah · Kerja Sama Para Dai</title>
-  <!-- Fonts & Icons -->
+  <title>Dauroh Ilmiah Para Pegiat Dakwah #1 · Kerja Sama Para Dai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
       background: #fbf9f4;
       color: #1e2b2f;
-      line-height: 1.7;
+      line-height: 1.75;
       padding: 2rem 1rem;
     }
 
@@ -34,7 +29,6 @@
       border: 1px solid #e7e2d8;
     }
 
-    /* Arabic typography */
     .arabic {
       font-family: 'Amiri', serif;
       font-size: 1.4rem;
@@ -46,26 +40,34 @@
 
     .arabic-small {
       font-family: 'Amiri', serif;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       direction: rtl;
       text-align: right;
+      color: #164a4b;
+    }
+
+    .arabic-inline {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      direction: rtl;
+      unicode-bidi: embed;
+      color: #164a4b;
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: #0d3e3f;
       margin-bottom: 0.5rem;
-      border-left: 6px solid #bc9b5a;
-      padding-left: 1.2rem;
+      text-align: center;
     }
 
     h2 {
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       font-weight: 600;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
+      margin-top: 2.8rem;
+      margin-bottom: 0.6rem;
       color: #164a4b;
       display: flex;
       align-items: center;
@@ -74,43 +76,54 @@
       padding-bottom: 0.4rem;
     }
 
-    h2 i {
-      color: #bc9b5a;
-      font-size: 1.5rem;
-    }
+    h2 i { color: #bc9b5a; font-size: 1.4rem; }
 
     h3 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      margin-top: 1.8rem;
-      margin-bottom: 0.8rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
       color: #1e5a5c;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.6rem;
     }
 
     h3 .number-badge {
       background: #bc9b5a;
       color: white;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
+      min-width: 28px;
       height: 28px;
       border-radius: 50%;
       flex-shrink: 0;
+      margin-top: 0.15rem;
     }
 
     .subhead {
       font-weight: 500;
       color: #506e6f;
       font-size: 1.05rem;
-      margin-top: -0.2rem;
-      margin-bottom: 0.8rem;
+      margin-top: -0.1rem;
+      margin-bottom: 0.9rem;
       font-style: italic;
+      padding-left: 2.4rem;
+    }
+
+    .subhead-ar {
+      font-family: 'Amiri', serif;
+      font-size: 1.2rem;
+      color: #506e6f;
+      direction: rtl;
+      text-align: right;
+      margin-top: -0.1rem;
+      margin-bottom: 0.9rem;
+      padding-left: 2.4rem;
+      display: block;
     }
 
     .ayah-box {
@@ -119,11 +132,10 @@
       border-radius: 1.2rem;
       margin: 1.2rem 0;
       border-right: 8px solid #bc9b5a;
-      font-size: 1.1rem;
     }
 
     .ayah-box .arabic {
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       margin-bottom: 0.5rem;
       color: #1d4e4f;
     }
@@ -131,37 +143,42 @@
     .ayah-box .translation {
       color: #2b4b4b;
       font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .ayah-box .surah {
+      font-weight: 600;
+      color: #9b7c44;
+      font-size: 0.9rem;
     }
 
     .note-card {
       background: #f9f7f2;
       border-radius: 1.5rem;
-      padding: 1.4rem 1.8rem;
-      margin: 1.4rem 0;
+      padding: 1.3rem 1.7rem;
+      margin: 1.3rem 0;
       border: 1px solid #e6dfd1;
     }
 
     .prinsip {
       background: #ebf3f1;
       border-radius: 1rem;
-      padding: 0.9rem 1.4rem;
+      padding: 0.85rem 1.4rem;
       font-weight: 600;
       color: #1b4a4a;
       margin: 1rem 0;
       display: flex;
       align-items: center;
       gap: 0.8rem;
+      flex-wrap: wrap;
     }
 
-    .prinsip i {
-      color: #bc9b5a;
-      font-size: 1.3rem;
-    }
+    .prinsip i { color: #bc9b5a; font-size: 1.2rem; }
 
     .keyword-box {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.8rem;
       justify-content: center;
       margin: 1.8rem 0 0.5rem;
     }
@@ -174,12 +191,18 @@
       color: #1e4d4e;
       font-size: 0.95rem;
       border: 1px solid #cfc1a8;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
-    .keyword strong {
-      color: #9b7c44;
-      margin-right: 0.2rem;
+    .keyword strong { color: #9b7c44; }
+
+    .keyword .ar-inline {
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      direction: rtl;
     }
 
     .table-mini {
@@ -203,24 +226,24 @@
     .table-mini td {
       padding: 0.7rem 0.8rem;
       border-bottom: 1px solid #ede8de;
+      vertical-align: top;
     }
 
-    .table-mini tr:last-child td {
-      border-bottom: none;
-    }
+    .table-mini tr:last-child td { border-bottom: none; }
 
     .table-mini .ar {
       font-family: 'Amiri', serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       direction: rtl;
       text-align: right;
       color: #1b4a4a;
+      white-space: nowrap;
     }
 
     hr {
       border: none;
       border-top: 2px solid #e2d9cb;
-      margin: 2rem 0;
+      margin: 2.5rem 0;
     }
 
     .dua {
@@ -233,16 +256,17 @@
     }
 
     .dua .arabic {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       color: #f7e4c1;
       direction: rtl;
       text-align: center;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.9rem;
+      line-height: 2;
     }
 
     .dua p {
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 1.05rem;
+      opacity: 0.95;
       margin-bottom: 0.5rem;
     }
 
@@ -258,25 +282,27 @@
     .inline-list {
       list-style: none;
       margin: 0.8rem 0;
+      padding-left: 0.2rem;
     }
 
     .inline-list li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
       display: flex;
       align-items: baseline;
-      gap: 0.6rem;
+      gap: 0.65rem;
     }
 
     .inline-list li i {
       color: #bc9b5a;
-      width: 1.2rem;
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
+      width: 1.1rem;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      flex-shrink: 0;
     }
 
     .quote {
-      font-style: italic;
-      padding: 0.8rem 1.3rem;
+      font-size: 1rem;
+      padding: 0.9rem 1.3rem;
       background: #f3efe8;
       border-radius: 0.8rem;
       border-left: 5px solid #bc9b5a;
@@ -284,108 +310,159 @@
       color: #2c4d4d;
     }
 
+    .quote .q-ar {
+      font-family: 'Amiri', serif;
+      font-size: 1.25rem;
+      direction: rtl;
+      text-align: right;
+      color: #1b4a4a;
+      display: block;
+      margin-bottom: 0.4rem;
+      line-height: 1.9;
+    }
+
+    .quote .q-id {
+      display: block;
+      font-style: italic;
+      color: #3d5c5c;
+    }
+
+    .small-note {
+      font-size: 0.92rem;
+      color: #5c7373;
+      margin: 0.6rem 0;
+    }
+
+    .num-list {
+      margin: 0.8rem 0 0.8rem 1.4rem;
+    }
+
+    .num-list li { margin-bottom: 0.4rem; }
+
     @media (max-width: 650px) {
-      .container {
-        padding: 1.5rem 1.2rem;
-      }
-      h1 {
-        font-size: 1.6rem;
-        padding-left: 0.8rem;
-      }
-      h2 {
-        font-size: 1.4rem;
-      }
-      .arabic {
-        font-size: 1.2rem;
-      }
-      .ayah-box {
-        padding: 1rem 1rem;
-      }
-      .table-mini th, .table-mini td {
-        padding: 0.5rem;
-      }
+      .container { padding: 1.5rem 1.1rem; }
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.3rem; }
+      h3 { font-size: 1.1rem; }
+      .arabic { font-size: 1.2rem; }
+      .arabic-inline { font-size: 1.05rem; }
+      .ayah-box { padding: 1rem 1rem; }
+      .ayah-box .arabic { font-size: 1.25rem; }
+      .subhead, .subhead-ar { padding-left: 0; }
+      .table-mini th, .table-mini td { padding: 0.5rem; font-size: 0.85rem; }
+      .table-mini .ar { font-size: 1rem; white-space: normal; }
+      .keyword { font-size: 0.85rem; padding: 0.4rem 0.9rem; }
+      .dua .arabic { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- HEADER -->
+    <!-- ===== HEADER ===== -->
     <div style="text-align: center; margin-bottom: 1rem;">
       <span style="background: #bc9b5a; color: white; font-weight: 600; padding: 0.3rem 1.2rem; border-radius: 50px; font-size: 0.8rem; letter-spacing: 0.5px;">DAUROH ILMIAH PARA PEGIAT DAKWAH #1</span>
     </div>
-    <h1 style="text-align: center; border-left: none; padding-left: 0; font-size: 2rem;">Kerja Sama Para Dai &amp; Pengaruhnya terhadap Masyarakat</h1>
-    <p style="text-align: center; font-size: 1.2rem; color: #506e6f; margin-bottom: 0.2rem;"><span class="arabic-small" style="font-size: 1.5rem;">التَّعَاوُنُ بَيْنَ الدُّعَاةِ وَأَثَرُهُ فِي الْمُجْتَمَعِ</span></p>
-    <p style="text-align: center; font-weight: 500; color: #bc9b5a; font-size: 1rem;">Ust. Nuruddin Abu Faynan Al-Makky</p>
+
+    <div style="text-align: center; margin-bottom: 1.2rem;">
+      <div class="arabic" style="font-size: 1.7rem; text-align: center; margin-bottom: 0.3rem;">التَّعَاوُنُ بَيْنَ الدُّعَاةِ وَأَثَرُهُ فِي الْمُجْتَمَعِ</div>
+      <h1>Kerja Sama Para Dai dan Pengaruhnya terhadap Masyarakat</h1>
+    </div>
+    <p style="text-align: center; font-weight: 500; color: #bc9b5a; font-size: 1rem; margin-bottom: 0.2rem;">Ust. Nuruddin Abu Faynan Al-Makky</p>
 
     <hr>
 
-    <!-- ========== PEMBAHASAN PERTAMA ========== -->
-    <h2><i class="fas fa-book-open"></i> Pembahasan Pertama: Landasan Dakwah</h2>
+    <!-- ============================================================= -->
+    <!-- PEMBAHASAN PERTAMA                                            -->
+    <!-- ============================================================= -->
+    <h2><i class="fas fa-book-open"></i> الْمَبْحَثُ الْأَوَّلُ: أُسُسُ الدَّعْوَةِ — Landasan Dakwah</h2>
 
-    <!-- 1. Bashirah -->
-    <h3><span class="number-badge">1</span> Bashirah (Ilmu &amp; Pemahaman)</h3>
-    <p class="subhead">أَصْلُ الدَّعْوَةِ: الْبَصِيرَةُ</p>
+    <!-- 1. BASHIRAH -->
+    <h3><span class="number-badge">1</span> أَصْلُ الدَّعْوَةِ: الْبَصِيرَةُ — Landasan Dakwah: Bashirah (Ilmu dan Pemahaman)</h3>
 
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿قُلْ هَذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ عَلَىٰ بَصِيرَةٍ أَنَا وَمَنِ اتَّبَعَنِي﴾</div>
-      <div class="translation">[Yusuf: 108] — "Katakanlah: Inilah jalanku. Aku dan orang-orang yang mengikutiku mengajak kepada Allah di atas bashirah."</div>
+      <div class="translation"><span class="surah">[Yusuf: 108]</span> — "Katakanlah: Inilah jalanku. Aku dan orang-orang yang mengikutiku mengajak kepada Allah di atas bashirah."</div>
     </div>
 
-    <p>Menurut <strong>Syaikh Muhammad bin Shalih Al-‘Utsaimin</strong> رحمه الله, seorang dai harus memiliki tiga bentuk bashirah:</p>
+    <p>Menurut penjelasan <strong>Syaikh Muhammad bin Shalih Al-'Utsaimin</strong> رحمه الله, seorang dai harus memiliki tiga bentuk bashirah:</p>
+
     <ul class="inline-list">
-      <li><i class="fas fa-check-circle"></i> <strong>Pertama:</strong> الْبَصِيرَةُ فِيمَا يَدْعُو إِلَيْهِ — Memahami materi yang didakwahkan berdasarkan ilmu.</li>
-      <li><i class="fas fa-check-circle"></i> <strong>Kedua:</strong> الْبَصِيرَةُ فِي حَالِ مَنْ يَدْعُوهُمْ — Memahami keadaan sasaran dakwah.</li>
-      <li><i class="fas fa-check-circle"></i> <strong>Ketiga:</strong> الْبَصِيرَةُ فِي أُسْلُوبِ الدَّعْوَةِ — Memahami metode penyampaian yang tepat.</li>
+      <li><i class="fas fa-check-circle"></i> <strong>Pertama:</strong> <span class="arabic-inline">الْبَصِيرَةُ فِيمَا يَدْعُو إِلَيْهِ</span> — Memahami materi yang didakwahkan berdasarkan ilmu.</li>
+      <li><i class="fas fa-check-circle"></i> <strong>Kedua:</strong> <span class="arabic-inline">الْبَصِيرَةُ فِي حَالِ مَنْ يَدْعُوهُمْ</span> — Memahami keadaan orang-orang yang menjadi sasaran dakwah.</li>
+      <li><i class="fas fa-check-circle"></i> <strong>Ketiga:</strong> <span class="arabic-inline">الْبَصِيرَةُ فِي أُسْلُوبِ الدَّعْوَةِ</span> — Memahami metode dan cara menyampaikan dakwah dengan tepat.</li>
     </ul>
-    <div class="quote">لَابُدَّ مِنْ هَذِهِ الْبَصَائِرِ الثَّلَاثِ. — "Ketiga bentuk bashirah ini harus ada."</div>
-    <p><strong>Pelajaran penting:</strong> Dai tidak cukup hanya memiliki semangat. Ia harus memiliki ilmu, memahami kondisi masyarakat, dan mengetahui metode yang tepat.</p>
 
-    <!-- 2. Ta'awun -->
-    <h3><span class="number-badge">2</span> Kerja Sama dalam Kebaikan &amp; Ketakwaan</h3>
-    <p class="subhead">التَّعَاوُنُ عَلَى الْبِرِّ وَالتَّقْوَىٰ</p>
+    <p>Beliau menegaskan:</p>
+    <div class="quote">
+      <span class="q-ar">لَابُدَّ مِنْ هَذِهِ الْبَصَائِرِ الثَّلَاثِ.</span>
+      <span class="q-id">"Ketiga bentuk bashirah ini harus ada."</span>
+    </div>
 
+    <p><strong>Pelajaran penting:</strong></p>
+    <p>Dai tidak cukup hanya memiliki semangat. Ia harus memiliki ilmu, memahami kondisi masyarakat, dan mengetahui metode yang tepat dalam menyampaikan kebenaran.</p>
+
+    <!-- 2. TA'AWUN -->
+    <h3><span class="number-badge">2</span> التَّعَاوُنُ عَلَى الْبِرِّ وَالتَّقْوَىٰ — Kerja Sama dalam Kebaikan dan Ketakwaan</h3>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ﴾</div>
-      <div class="translation">[Al-Ma'idah: 2] — "Tolong-menolonglah kalian dalam kebajikan dan ketakwaan, dan janganlah tolong-menolong dalam dosa dan permusuhan."</div>
+      <div class="translation"><span class="surah">[Al-Ma'idah: 2]</span> — "Tolong-menolonglah kalian dalam kebajikan dan ketakwaan, dan janganlah tolong-menolong dalam dosa dan permusuhan."</div>
     </div>
 
-    <p>Kerja sama para dai bukan sekadar menyelenggarakan kegiatan atau membagi tugas, tetapi menyatukan potensi untuk menegakkan kebenaran. Setiap orang memiliki kemampuan berbeda:</p>
+    <p>Kerja sama para dai bukan sekadar menyelenggarakan kegiatan atau membagi tugas, tetapi menyatukan potensi untuk menegakkan kebenaran.</p>
+    <p>Setiap orang memiliki kemampuan dan kelebihan yang berbeda:</p>
     <ul class="inline-list">
-      <li><i class="fas fa-graduation-cap"></i> Kuat dalam bidang ilmu dan pengajaran.</li>
-      <li><i class="fas fa-users"></i> Kemampuan dalam pendidikan dan pembinaan keluarga.</li>
-      <li><i class="fas fa-building"></i> Berpengalaman dalam pengelolaan lembaga.</li>
-      <li><i class="fas fa-bullhorn"></i> Keahlian dalam media dan komunikasi.</li>
-      <li><i class="fas fa-hand-holding-heart"></i> Bergerak dalam pelayanan sosial dan kemasyarakatan.</li>
+      <li><i class="fas fa-graduation-cap"></i> Ada yang kuat dalam bidang ilmu dan pengajaran.</li>
+      <li><i class="fas fa-users"></i> Ada yang memiliki kemampuan dalam pendidikan dan pembinaan keluarga.</li>
+      <li><i class="fas fa-building"></i> Ada yang berpengalaman dalam pengelolaan lembaga.</li>
+      <li><i class="fas fa-bullhorn"></i> Ada yang memiliki keahlian dalam media dan komunikasi.</li>
+      <li><i class="fas fa-hand-holding-heart"></i> Ada yang bergerak dalam pelayanan sosial dan kemasyarakatan.</li>
     </ul>
     <p>Perbedaan kemampuan hendaknya menjadi sarana untuk saling melengkapi, bukan saling merendahkan.</p>
-    <div class="prinsip"><i class="fas fa-shield-alt"></i> Kerja sama harus tetap berlandaskan Al-Qur'an dan Sunnah. Tidak boleh mengorbankan prinsip agama demi kepentingan bersama.</div>
 
-    <!-- 3. Hikmah -->
-    <h3><span class="number-badge">3</span> Hikmah dalam Menyampaikan Kebenaran</h3>
-    <p class="subhead">الْحِكْمَةُ فِي الدَّعْوَةِ</p>
+    <div class="prinsip"><i class="fas fa-shield-alt"></i> <strong>Catatan penting:</strong> Kerja sama harus tetap berlandaskan Al-Qur'an dan Sunnah. Tidak boleh mengorbankan prinsip agama demi kepentingan bersama.</div>
 
+    <!-- 3. HIKMAH -->
+    <h3><span class="number-badge">3</span> الْحِكْمَةُ فِي الدَّعْوَةِ — Hikmah dalam Menyampaikan Kebenaran</h3>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ﴾</div>
-      <div class="translation">[An-Nahl: 125] — "Serulah manusia kepada jalan Tuhanmu dengan hikmah dan nasihat yang baik."</div>
+      <div class="translation"><span class="surah">[An-Nahl: 125]</span> — "Serulah manusia kepada jalan Tuhanmu dengan hikmah dan nasihat yang baik."</div>
     </div>
 
-    <p><strong>Kisah Arab Badui:</strong> Rasulullah ﷺ bersabda: <span class="arabic-small">دَعُوهُ وَلَا تُزْرِمُوهُ</span> — "Biarkan dia, jangan kalian hentikan kencingnya."</p>
-    <p>Rasulullah ﷺ tidak membenarkan kesalahan, tetapi membimbing dengan mempertimbangkan keadaan.</p>
-    <div class="keyword-box">
-      <span class="keyword"><strong>•</strong> Tegas dalam prinsip</span>
-      <span class="keyword"><strong>•</strong> Lembut dalam pendekatan</span>
-      <span class="keyword"><strong>•</strong> Bijak dalam tindakan</span>
+    <p>Salah satu contoh nyata adalah kisah seorang Arab Badui yang buang air kecil di masjid.</p>
+    <p>Rasulullah ﷺ bersabda:</p>
+    <div class="quote">
+      <span class="q-ar">دَعُوهُ وَلَا تُزْرِمُوهُ.</span>
+      <span class="q-id">"Biarkan dia, jangan kalian hentikan kencingnya."</span>
     </div>
+    <p>Rasulullah ﷺ tidak membenarkan kesalahan tersebut, tetapi membimbing pelakunya dengan mempertimbangkan keadaan dan akibat dari tindakan yang dilakukan.</p>
+
+    <p><strong>Tiga prinsip dalam berdakwah:</strong></p>
+    <ul class="inline-list">
+      <li><i class="fas fa-balance-scale"></i> Tegas dalam prinsip.</li>
+      <li><i class="fas fa-feather-alt"></i> Lembut dalam pendekatan.</li>
+      <li><i class="fas fa-lightbulb"></i> Bijak dalam mengambil tindakan.</li>
+    </ul>
 
     <hr>
 
-    <!-- ========== PEMBAHASAN KEDUA ========== -->
-    <h2><i class="fas fa-user-check"></i> Pembahasan Kedua: Empat Karakter Utama Dai</h2>
-    <p class="subhead">أَرْبَعُ صِفَاتٍ لِلدَّاعِيَةِ</p>
+    <!-- ============================================================= -->
+    <!-- PEMBAHASAN KEDUA                                              -->
+    <!-- ============================================================= -->
+    <h2><i class="fas fa-user-check"></i> الْمَبْحَثُ الثَّانِي: أَرْبَعُ صِفَاتٍ لِلدَّاعِيَةِ — Empat Karakter Utama Seorang Dai</h2>
+
+    <p>Dakwah bukan hanya tentang kemampuan berbicara dan menyampaikan ilmu. Seorang dai harus membangun kepribadian yang mencerminkan nilai-nilai yang ia dakwahkan.</p>
+    <p>Berdasarkan penjelasan <strong>Syaikh Muhammad bin Shalih Al-'Utsaimin</strong> رحمه الله, ada empat karakter penting:</p>
 
     <table class="table-mini">
-      <thead><tr><th>No.</th><th>Karakter</th><th>Makna</th></tr></thead>
+      <thead>
+        <tr><th>No.</th><th>Karakter</th><th>Makna</th></tr>
+      </thead>
       <tbody>
         <tr><td>١</td><td class="ar">التَّخَلُّقُ بِمَا يَدْعُو إِلَيْهِ</td><td>Mengamalkan apa yang didakwahkan</td></tr>
         <tr><td>٢</td><td class="ar">الْبَصِيرَةُ بِمَا يَدْعُو إِلَيْهِ</td><td>Memiliki ilmu dan bashirah</td></tr>
@@ -394,137 +471,306 @@
       </tbody>
     </table>
 
-    <!-- 1. Takhalluq -->
-    <h3><span class="number-badge">1</span> Mengamalkan Apa yang Didakwahkan</h3>
-    <div class="quote">إِنَّهُ يَجِبُ عَلَى الدَّاعِيَةِ أَيْضًا أَنْ يَكُونَ هُوَ أَوَّلَ مَنْ يَتَخَلَّقُ بِمَا يَدْعُو إِلَيْهِ. — "Seorang dai wajib menjadi orang pertama yang menghiasi dirinya dengan apa yang ia serukan."</div>
+    <!-- 1. TAKHALLUQ -->
+    <h3><span class="number-badge">1</span> التَّخَلُّقُ بِمَا يَدْعُو إِلَيْهِ — Mengamalkan Apa yang Didakwahkan</h3>
+
+    <p>Syaikh Ibnu 'Utsaimin رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">إِنَّهُ يَجِبُ عَلَى الدَّاعِيَةِ أَيْضًا أَنْ يَكُونَ هُوَ أَوَّلَ مَنْ يَتَخَلَّقُ بِمَا يَدْعُو إِلَيْهِ.</span>
+      <span class="q-id">"Seorang dai wajib menjadi orang pertama yang menghiasi dirinya dengan apa yang ia serukan."</span>
+    </div>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿أَتَأْمُرُونَ النَّاسَ بِالْبِرِّ وَتَنْسَوْنَ أَنْفُسَكُمْ وَأَنْتُمْ تَتْلُونَ الْكِتَابَ أَفَلَا تَعْقِلُونَ﴾</div>
-      <div class="translation">[Al-Baqarah: 44] — "Apakah kalian menyuruh manusia melakukan kebajikan, sedangkan kalian melupakan diri sendiri?"</div>
+      <div class="translation"><span class="surah">[Al-Baqarah: 44]</span> — "Apakah kalian menyuruh manusia melakukan kebajikan, sedangkan kalian melupakan diri sendiri?"</div>
     </div>
+
+    <p><strong>Inti pelajaran:</strong></p>
     <ul class="inline-list">
       <li><i class="fas fa-star"></i> Dai harus menjadi teladan dalam ucapan dan perbuatan.</li>
       <li><i class="fas fa-star"></i> Mengajak kepada kesabaran berarti berusaha menjadi orang yang sabar.</li>
-      <li><i class="fas fa-star"></i> Perbaikan masyarakat dimulai dengan muhasabah diri.</li>
+      <li><i class="fas fa-star"></i> Mengajak kepada amanah berarti berusaha menjadi orang yang amanah.</li>
+      <li><i class="fas fa-star"></i> Perbaikan masyarakat hendaknya dimulai dengan muhasabah diri.</li>
     </ul>
-    <div class="prinsip"><i class="fas fa-comment-dots"></i> بِالْمَقَالِ وَبِالْحَالِ — Dengan ucapan dan keteladanan.</div>
 
-    <!-- 2. Bashirah -->
-    <h3><span class="number-badge">2</span> Memiliki Ilmu dan Bashirah</h3>
-    <div class="quote">وَمِمَّا يَجِبُ عَلَى الدَّاعِيَةِ أَنْ يَكُونَ بَصِيرًا بِمَا يَدْعُو إِلَيْهِ. — "Di antara kewajiban seorang dai adalah memiliki bashirah terhadap apa yang ia dakwahkan."</div>
+    <div class="prinsip"><i class="fas fa-comment-dots"></i> <span class="arabic-inline" style="font-size: 1.2rem;">بِالْمَقَالِ وَبِالْحَالِ.</span> — Dengan ucapan dan keteladanan.</div>
+
+    <!-- 2. BASHIRAH -->
+    <h3><span class="number-badge">2</span> الْبَصِيرَةُ بِمَا يَدْعُو إِلَيْهِ — Memiliki Ilmu dan Bashirah</h3>
+
+    <p>Syaikh رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">وَمِمَّا يَجِبُ عَلَى الدَّاعِيَةِ أَنْ يَكُونَ بَصِيرًا بِمَا يَدْعُو إِلَيْهِ.</span>
+      <span class="q-id">"Di antara kewajiban seorang dai adalah memiliki bashirah terhadap apa yang ia dakwahkan."</span>
+    </div>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿قُلْ هَذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ عَلَىٰ بَصِيرَةٍ أَنَا وَمَنِ اتَّبَعَنِي﴾</div>
-      <div class="translation">[Yusuf: 108]</div>
+      <div class="translation"><span class="surah">[Yusuf: 108]</span> — "Katakanlah: Inilah jalanku. Aku dan orang-orang yang mengikutiku mengajak kepada Allah di atas bashirah."</div>
     </div>
-    <div class="quote">فَلَا يَتَكَلَّمُ إِلَّا بِمَا يَعْلَمُ أَنَّهُ الْحَقُّ، أَوْ بِمَا يَغْلِبُ عَلَى ظَنِّهِ أَنَّهُ الْحَقُّ. — "Janganlah ia berbicara kecuali dengan sesuatu yang ia ketahui sebagai kebenaran, atau yang kuat dugaan sebagai kebenaran."</div>
-    <p><strong>Dakwah tanpa ilmu menimbulkan dua kerusakan:</strong></p>
-    <ul class="inline-list">
-      <li><i class="fas fa-exclamation-circle"></i> <strong>Pertama:</strong> Masyarakat menerima kebatilan yang disampaikan tanpa ilmu.</li>
-      <li><i class="fas fa-exclamation-circle"></i> <strong>Kedua:</strong> Masyarakat justru menolak kebenaran yang disampaikan berdasarkan ilmu.</li>
-    </ul>
-    <div class="prinsip"><i class="fas fa-brain"></i> الْعِلْمُ قَبْلَ الْقَوْلِ وَالْعَمَلِ — Ilmu harus didahulukan sebelum ucapan dan perbuatan.</div>
 
-    <!-- 3. Sabar -->
-    <h3><span class="number-badge">3</span> Bersabar Menghadapi Gangguan</h3>
-    <div class="quote">وَمِمَّا يَجِبُ أَنْ يَكُونَ عَلَيْهِ أَيْضًا الدَّاعِيَةُ أَنْ يَكُونَ صَبُورًا عَلَى مَا يَنَالُهُ مِنْ أَذًى قَوْلِيٍّ أَوْ فِعْلِيٍّ. — "Di antara karakter yang wajib dimiliki seorang dai adalah bersabar terhadap gangguan, baik ucapan maupun perbuatan."</div>
+    <p>Syaikh رحمه الله menjelaskan:</p>
+    <div class="quote">
+      <span class="q-ar">فَلَا يَتَكَلَّمُ إِلَّا بِمَا يَعْلَمُ أَنَّهُ الْحَقُّ، أَوْ بِمَا يَغْلِبُ عَلَى ظَنِّهِ أَنَّهُ الْحَقُّ.</span>
+      <span class="q-id">"Janganlah ia berbicara kecuali dengan sesuatu yang ia ketahui sebagai kebenaran, atau sesuatu yang kuat dugaan dan penilaiannya sebagai kebenaran."</span>
+    </div>
+
+    <p>Dakwah tanpa ilmu dapat menimbulkan dua kerusakan:</p>
+    <ul class="inline-list">
+      <li><i class="fas fa-exclamation-triangle"></i> <strong>Pertama:</strong> <span class="arabic-inline">قَبُولُ الْبَاطِلِ الَّذِي دَعَا إِلَيْهِ هَذَا الدَّاعِيَةُ عَنْ غَيْرِ عِلْمٍ.</span> — Masyarakat menerima kebatilan yang disampaikan oleh dai tanpa ilmu.</li>
+      <li><i class="fas fa-exclamation-triangle"></i> <strong>Kedua:</strong> <span class="arabic-inline">رَدُّ الْحَقِّ الْمَبْنِيِّ عَلَى الْعِلْمِ.</span> — Masyarakat justru menolak kebenaran yang disampaikan berdasarkan ilmu.</li>
+    </ul>
+
+    <p>Allah تعالى berfirman:</p>
+    <div class="ayah-box">
+      <div class="arabic">﴿وَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِ عِلْمٌ﴾</div>
+      <div class="translation"><span class="surah">[Al-Isra': 36]</span> — "Janganlah engkau mengikuti sesuatu yang tidak engkau ketahui."</div>
+    </div>
+
+    <p><strong>Inti pelajaran:</strong></p>
+    <ul class="inline-list">
+      <li><i class="fas fa-check"></i> Jangan berbicara atas nama Allah tanpa ilmu.</li>
+      <li><i class="fas fa-check"></i> Pahami persoalan sebelum memberikan hukum.</li>
+      <li><i class="fas fa-check"></i> Bedakan antara ibadah dan sarana.</li>
+      <li><i class="fas fa-check"></i> Jangan malu mengatakan: <span class="arabic-inline">اللَّهُ أَعْلَمُ</span> (Allah lebih mengetahui).</li>
+    </ul>
+
+    <div class="prinsip"><i class="fas fa-brain"></i> <span class="arabic-inline" style="font-size: 1.2rem;">الْعِلْمُ قَبْلَ الْقَوْلِ وَالْعَمَلِ.</span> — Ilmu harus didahulukan sebelum ucapan dan perbuatan.</div>
+
+    <!-- 3. SABAR -->
+    <h3><span class="number-badge">3</span> الصَّبْرُ عَلَى الْأَذَى — Bersabar Menghadapi Gangguan</h3>
+
+    <p>Syaikh رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">وَمِمَّا يَجِبُ أَنْ يَكُونَ عَلَيْهِ أَيْضًا الدَّاعِيَةُ أَنْ يَكُونَ صَبُورًا عَلَى مَا يَنَالُهُ مِنْ أَذًى قَوْلِيٍّ أَوْ فِعْلِيٍّ.</span>
+      <span class="q-id">"Di antara karakter yang wajib dimiliki seorang dai adalah bersabar terhadap gangguan yang menimpanya, baik berupa ucapan maupun perbuatan."</span>
+    </div>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿وَأْمُرْ بِالْمَعْرُوفِ وَانْهَ عَنِ الْمُنْكَرِ وَاصْبِرْ عَلَىٰ مَا أَصَابَكَ إِنَّ ذَٰلِكَ مِنْ عَزْمِ الْأُمُورِ﴾</div>
-      <div class="translation">[Luqman: 17]</div>
+      <div class="translation"><span class="surah">[Luqman: 17]</span> — "Perintahkanlah yang makruf, cegahlah dari yang mungkar, dan bersabarlah terhadap apa yang menimpamu."</div>
     </div>
+
+    <p><strong>Inti pelajaran:</strong></p>
     <ul class="inline-list">
       <li><i class="fas fa-heart"></i> Tidak semua manusia menerima kebenaran.</li>
       <li><i class="fas fa-heart"></i> Para nabi dan rasul pun menghadapi penentangan.</li>
       <li><i class="fas fa-heart"></i> Jangan mengukur kebenaran dengan pujian atau celaan manusia.</li>
+      <li><i class="fas fa-heart"></i> Teruslah berdakwah dengan ilmu, hikmah, dan kesabaran.</li>
     </ul>
-    <div class="prinsip"><i class="fas fa-hourglass-half"></i> الدَّعْوَةُ تَحْتَاجُ إِلَى صَبْرٍ طَوِيلٍ — Dakwah membutuhkan kesabaran yang panjang.</div>
 
-    <!-- 4. Ikhlas -->
-    <h3><span class="number-badge">4</span> Ikhlas untuk Allah, Bukan Diri Sendiri</h3>
-    <div class="quote">ثُمَّ إِنَّ الدَّاعِيَةَ لَا يَنْبَغِي أَنْ يَكُونَ دَاعِيَةً لِشَخْصِهِ، بَلْ يَجِبُ أَنْ يَكُونَ دَاعِيَةً إِلَى اللَّهِ. — "Seorang dai tidak sepantasnya mengajak kepada pribadinya, bahkan wajib mengajak kepada Allah."</div>
+    <div class="prinsip"><i class="fas fa-hourglass-half"></i> <span class="arabic-inline" style="font-size: 1.2rem;">الدَّعْوَةُ تَحْتَاجُ إِلَى صَبْرٍ طَوِيلٍ.</span> — Dakwah membutuhkan kesabaran yang panjang.</div>
+
+    <!-- 4. IKHLAS -->
+    <h3><span class="number-badge">4</span> الْإِخْلَاصُ لِلَّهِ لَا لِلنَّفْسِ — Mengajak kepada Allah, Bukan kepada Diri Sendiri</h3>
+
+    <p>Syaikh رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">ثُمَّ إِنَّ الدَّاعِيَةَ لَا يَنْبَغِي أَنْ يَكُونَ دَاعِيَةً لِشَخْصِهِ، بَلْ يَجِبُ أَنْ يَكُونَ دَاعِيَةً إِلَى اللَّهِ.</span>
+      <span class="q-id">"Seorang dai tidak sepantasnya menjadi dai yang mengajak kepada pribadinya. Bahkan wajib baginya menjadi dai yang mengajak kepada Allah."</span>
+    </div>
+
+    <p>Allah تعالى berfirman:</p>
+    <div class="ayah-box">
+      <div class="arabic">﴿أَدْعُو إِلَى اللَّهِ عَلَىٰ بَصِيرَةٍ أَنَا وَمَنِ اتَّبَعَنِي﴾</div>
+      <div class="translation"><span class="surah">[Yusuf: 108]</span> — "Aku mengajak kepada Allah di atas bashirah."</div>
+    </div>
+
+    <p><strong>Inti pelajaran:</strong></p>
     <ul class="inline-list">
       <li><i class="fas fa-mosque"></i> Tujuan dakwah adalah mencari keridaan Allah, bukan popularitas.</li>
       <li><i class="fas fa-smile"></i> Bergembira ketika kebenaran disampaikan oleh dai lain.</li>
-      <li><i class="fas fa-handshake"></i> Tidak merasa tersaingi ketika orang lain mendapat kepercayaan.</li>
+      <li><i class="fas fa-handshake"></i> Tidak merasa tersaingi ketika orang lain mendapatkan manfaat dan kepercayaan masyarakat.</li>
+      <li><i class="fas fa-flag"></i> Yang terpenting adalah kebenaran diterima, bukan siapa yang menyampaikannya.</li>
     </ul>
-    <div class="prinsip"><i class="fas fa-kaaba"></i> نَدْعُو إِلَى اللَّهِ، لَا إِلَى أَنْفُسِنَا — Kita mengajak kepada Allah, bukan kepada diri sendiri.</div>
+
+    <div class="prinsip"><i class="fas fa-kaaba"></i> <span class="arabic-inline" style="font-size: 1.2rem;">نَدْعُو إِلَى اللَّهِ، لَا إِلَى أَنْفُسِنَا.</span> — Kita mengajak kepada Allah, bukan kepada diri kita sendiri.</div>
 
     <div class="keyword-box">
-      <span class="keyword"><strong>تَخَلُّقٌ</strong> Keteladanan</span>
-      <span class="keyword"><strong>بَصِيرَةٌ</strong> Ilmu</span>
-      <span class="keyword"><strong>صَبْرٌ</strong> Kesabaran</span>
-      <span class="keyword"><strong>إِخْلَاصٌ</strong> Keikhlasan</span>
+      <span class="keyword"><span class="ar-inline">تَخَلُّقٌ</span> — Keteladanan</span>
+      <span class="keyword"><span class="ar-inline">بَصِيرَةٌ</span> — Ilmu</span>
+      <span class="keyword"><span class="ar-inline">صَبْرٌ</span> — Kesabaran</span>
+      <span class="keyword"><span class="ar-inline">إِخْلَاصٌ</span> — Keikhlasan</span>
     </div>
 
     <hr>
 
-    <!-- ========== PEMBAHASAN KETIGA ========== -->
-    <h2><i class="fas fa-handshake"></i> Pembahasan Ketiga: Adab Para Dai</h2>
-    <p class="subhead">التَّعَاوُنُ وَتَرْكُ التَّحَاسُدِ وَالتَّفَرُّقِ</p>
+    <!-- ============================================================= -->
+    <!-- PEMBAHASAN KETIGA                                             -->
+    <!-- ============================================================= -->
+    <h2><i class="fas fa-handshake"></i> الْمَبْحَثُ الثَّالِثُ: مِنْ آدَابِ الدُّعَاةِ — Adab Para Dai</h2>
+    <p class="subhead" style="padding-left: 0; margin-bottom: 0.5rem; font-style: normal; font-weight: 600; color: #164a4b; font-size: 1.1rem;">التَّعَاوُنُ وَتَرْكُ التَّحَاسُدِ وَالتَّفَرُّقِ</p>
+    <p style="margin-bottom: 1rem; color: #506e6f; font-weight: 500;">Bekerja Sama, Menjauhi Kedengkian, dan Tidak Berpecah Belah</p>
 
-    <!-- 1 -->
-    <h3><span class="number-badge">1</span> Diterimanya Dakwah, Bukan Pribadinya</h3>
-    <div class="quote">وَمِنْ آدَابِ الدُّعَاةِ الَّتِي يَجِبُ أَنْ يَكُونُوا عَلَيْهَا هُوَ تَعَاوُنُهُمْ فِيمَا بَيْنَهُمْ. — "Di antara adab para dai yang wajib mereka miliki adalah saling bekerja sama."</div>
-    <div class="quote">لَا يَكُنْ هَمُّ الْوَاحِدِ مِنْهُمْ أَنْ يُقْبَلَ قَوْلُهُ وَيُقَدَّمَ عَلَى غَيْرِهِ، بَلْ يَكُنْ هَمُّ الدَّاعِيَةِ أَنْ تُقْبَلَ الدَّعْوَةُ، سَوَاءٌ صَدَرَتْ مِنْهُ أَوْ صَدَرَتْ مِنْ غَيْرِهِ. — "Jangan sampai perhatian utamanya adalah agar perkataannya diterima dan didahulukan. Hendaknya perhatian utama adalah agar dakwah diterima, baik darinya maupun orang lain."</div>
-    <div class="prinsip"><i class="fas fa-bullseye"></i> هَمُّ الدَّاعِيَةِ أَنْ تُقْبَلَ الدَّعْوَةُ، لَا أَنْ يُقْبَلَ هُوَ — Orientasi dai adalah agar dakwah diterima, bukan semata-mata dirinya.</div>
+    <!-- 1. QABUL DAKWAH -->
+    <h3><span class="number-badge">1</span> أَوَّلًا: قَبُولُ الدَّعْوَةِ لَا قَبُولُ الشَّخْصِ — Orientasi Dai: Diterimanya Dakwah, Bukan Pribadinya</h3>
 
-    <!-- 2 -->
-    <h3><span class="number-badge">2</span> Para Dai Harus Menjadi Satu Kekuatan</h3>
-    <div class="quote">الْوَاجِبُ عَلَى الدُّعَاةِ أَنْ يَكُونُوا يَدًا وَاحِدَةً، يَتَسَاعَدُونَ، وَيَتَعَاوَنُونَ، وَيَتَشَاوَرُونَ فِيمَا بَيْنَهُمْ، وَيَنْطَلِقُونَ انْطِلَاقًا وَاحِدًا. — "Kewajiban para dai adalah menjadi satu tangan: saling membantu, bekerja sama, bermusyawarah, dan bergerak bersama."</div>
-    <div class="keyword-box" style="justify-content: flex-start;">
-      <span class="keyword"><strong>١</strong> يَتَسَاعَدُونَ — Saling membantu</span>
-      <span class="keyword"><strong>٢</strong> يَتَعَاوَنُونَ — Saling bekerja sama</span>
-      <span class="keyword"><strong>٣</strong> يَتَشَاوَرُونَ — Saling bermusyawarah</span>
-      <span class="keyword"><strong>٤</strong> يَنْطَلِقُونَ انْطِلَاقًا وَاحِدًا — Bergerak dengan satu tujuan</span>
+    <p>Syaikh Muhammad bin Shalih Al-'Utsaimin رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">وَمِنْ آدَابِ الدُّعَاةِ الَّتِي يَجِبُ أَنْ يَكُونُوا عَلَيْهَا هُوَ تَعَاوُنُهُمْ، تَعَاوُنُهُمْ فِيمَا بَيْنَهُمْ.</span>
+      <span class="q-id">"Di antara adab para dai yang wajib mereka miliki adalah saling bekerja sama di antara mereka."</span>
     </div>
+
+    <p>Beliau menjelaskan:</p>
+    <div class="quote">
+      <span class="q-ar">لَا يَكُنْ هَمُّ الْوَاحِدِ مِنْهُمْ أَنْ يُقْبَلَ قَوْلُهُ وَيُقَدَّمَ عَلَى غَيْرِهِ، بَلْ يَكُنْ هَمُّ الدَّاعِيَةِ أَنْ تُقْبَلَ الدَّعْوَةُ، سَوَاءٌ صَدَرَتْ مِنْهُ أَوْ صَدَرَتْ مِنْ غَيْرِهِ.</span>
+      <span class="q-id">"Jangan sampai perhatian utama seorang dai adalah agar perkataannya diterima dan didahulukan daripada orang lain. Akan tetapi, hendaknya perhatian utama seorang dai adalah agar dakwah diterima, baik dakwah itu datang darinya maupun dari orang lain."</span>
+    </div>
+
+    <p>Beliau juga berkata:</p>
+    <div class="quote">
+      <span class="q-ar">صَحِيحٌ أَنَّ الْإِنْسَانَ يُحِبُّ أَنْ يَكُونَ الْخَيْرُ عَلَى يَدِهِ، لَكِنْ لَا يَكْرَهُ أَنْ يَكُونَ الْخَيْرُ عَلَى يَدِ غَيْرِهِ.</span>
+      <span class="q-id">"Benar, seseorang senang jika kebaikan terjadi melalui tangannya. Tetapi, jangan sampai ia tidak senang apabila kebaikan terjadi melalui tangan orang lain."</span>
+    </div>
+
+    <p><strong>Pelajaran:</strong></p>
+    <ul class="inline-list">
+      <li><i class="fas fa-bullseye"></i> Tujuan utama kita adalah diterimanya dakwah, bukan popularitas pribadi.</li>
+      <li><i class="fas fa-smile"></i> Bergembira ketika kebenaran disampaikan oleh dai lain.</li>
+      <li><i class="fas fa-handshake"></i> Tidak merasa tersaingi ketika saudara kita mendapatkan kepercayaan masyarakat.</li>
+    </ul>
+
+    <div class="prinsip"><i class="fas fa-bullseye"></i> <span class="arabic-inline" style="font-size: 1.15rem;">هَمُّ الدَّاعِيَةِ أَنْ تُقْبَلَ الدَّعْوَةُ، لَا أَنْ يُقْبَلَ هُوَ.</span> — Orientasi dai adalah agar dakwah diterima, bukan semata-mata agar dirinya yang diterima.</div>
+
+    <!-- 2. TA'AWUN WA TASYAUR -->
+    <h3><span class="number-badge">2</span> ثَانِيًا: التَّعَاوُنُ وَالتَّشَاوُرُ — Para Dai Harus Menjadi Satu Kekuatan</h3>
+
+    <p>Syaikh رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">الْوَاجِبُ عَلَى الدُّعَاةِ أَنْ يَكُونُوا يَدًا وَاحِدَةً، يَتَسَاعَدُونَ، وَيَتَعَاوَنُونَ، وَيَتَشَاوَرُونَ فِيمَا بَيْنَهُمْ، وَيَنْطَلِقُونَ انْطِلَاقًا وَاحِدًا.</span>
+      <span class="q-id">"Kewajiban para dai adalah menjadi satu tangan: saling membantu, saling bekerja sama, saling bermusyawarah, dan bergerak bersama-sama."</span>
+    </div>
+
+    <p><strong>Empat prinsip kerja sama:</strong></p>
+    <ul class="inline-list">
+      <li><i class="fas fa-1"></i> <span class="arabic-inline">يَتَسَاعَدُونَ</span> — Saling membantu.</li>
+      <li><i class="fas fa-2"></i> <span class="arabic-inline">يَتَعَاوَنُونَ</span> — Saling bekerja sama.</li>
+      <li><i class="fas fa-3"></i> <span class="arabic-inline">يَتَشَاوَرُونَ</span> — Saling bermusyawarah.</li>
+      <li><i class="fas fa-4"></i> <span class="arabic-inline">يَنْطَلِقُونَ انْطِلَاقًا وَاحِدًا</span> — Bergerak dengan satu arah dan tujuan.</li>
+    </ul>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ بَعْضُهُمْ أَوْلِيَاءُ بَعْضٍ يَأْمُرُونَ بِالْمَعْرُوفِ وَيَنْهَوْنَ عَنِ الْمُنْكَرِ﴾</div>
-      <div class="translation">[At-Taubah: 71]</div>
+      <div class="translation"><span class="surah">[At-Taubah: 71]</span> — "Orang-orang mukmin laki-laki dan perempuan, sebagian mereka menjadi penolong bagi sebagian yang lain. Mereka menyuruh kepada yang makruf dan mencegah dari yang mungkar."</div>
     </div>
-    <p>Tidak semua orang harus menjadi pembicara atau ketua. Ada yang mengajar, mengelola administrasi, mengurus keuangan, menyiapkan konsumsi, membersihkan tempat, melayani masyarakat, dan menginfakkan hartanya. Semua dapat berkontribusi sesuai kemampuan dan keikhlasan.</p>
 
-    <!-- 3 -->
-    <h3><span class="number-badge">3</span> Menjauhi Hasad dan Kedengkian</h3>
-    <div class="quote">إِنَّ الشَّيْطَانَ يُلْقِي فِي قَلْبِ الدَّاعِيَةِ شَيْئًا مِنْ كَرَاهَةِ دَاعِيَةٍ مِثْلِهِ إِذَا نَجَحَ فِي دَعْوَتِهِ. — "Setan melemparkan ke dalam hati seorang dai perasaan tidak senang terhadap dai lain yang berhasil."</div>
-    <div class="quote">الْحَسَدُ كَرَاهَةُ نِعْمَةِ اللَّهِ تَعَالَى عَلَى غَيْرِكَ. — "Hasad adalah tidak senang terhadap nikmat Allah yang diberikan kepada orang lain." (Syaikhul Islam Ibnu Taimiyah)</div>
+    <p><strong>Pelajaran:</strong> Tidak semua orang harus menjadi pembicara, ketua, atau tampil di depan.</p>
+    <p>Ada yang mengajar, mengelola administrasi, mengurus keuangan, menyiapkan konsumsi, membersihkan tempat, melayani masyarakat, dan menginfakkan hartanya.</p>
+    <p>Semua dapat berkontribusi dalam kebaikan sesuai kemampuan dan keikhlasannya.</p>
+
+    <!-- 3. TARKUL HASAD -->
+    <h3><span class="number-badge">3</span> ثَالِثًا: تَرْكُ التَّحَاسُدِ — Menjauhi Hasad dan Kedengkian Antarsesama Dai</h3>
+
+    <p>Syaikh رحمه الله mengingatkan:</p>
+    <div class="quote">
+      <span class="q-ar">إِنَّ الشَّيْطَانَ يُلْقِي فِي قَلْبِ الدَّاعِيَةِ شَيْئًا مِنْ كَرَاهَةِ دَاعِيَةٍ مِثْلِهِ إِذَا نَجَحَ فِي دَعْوَتِهِ.</span>
+      <span class="q-id">"Sesungguhnya setan melemparkan ke dalam hati seorang dai perasaan tidak senang terhadap dai lain yang berhasil dalam dakwahnya."</span>
+    </div>
+
+    <p>Beliau mengutip penjelasan Syaikhul Islam Ibnu Taimiyah رحمه الله tentang hakikat hasad:</p>
+    <div class="quote">
+      <span class="q-ar">الْحَسَدُ كَرَاهَةُ نِعْمَةِ اللَّهِ تَعَالَى عَلَى غَيْرِكَ.</span>
+      <span class="q-id">"Hasad adalah tidak senang terhadap nikmat Allah yang diberikan kepada orang lain."</span>
+    </div>
+
+    <p><strong>Pelajaran:</strong></p>
+    <ul class="inline-list">
+      <li><i class="fas fa-heart-broken"></i> Jangan merasa tersaingi ketika saudara kita berhasil.</li>
+      <li><i class="fas fa-heart-broken"></i> Jangan merasa berat ketika lembaga lain berkembang.</li>
+      <li><i class="fas fa-heart-broken"></i> Jangan menjadikan keberhasilan orang lain sebagai beban bagi hati.</li>
+      <li><i class="fas fa-heart-broken"></i> Doakan dan dukung setiap kebaikan yang sesuai dengan syariat.</li>
+    </ul>
+
+    <p>Allah تعالى berfirman:</p>
     <div class="ayah-box">
       <div class="arabic">﴿وَلَا تَنَازَعُوا فَتَفْشَلُوا وَتَذْهَبَ رِيحُكُمْ وَاصْبِرُوا إِنَّ اللَّهَ مَعَ الصَّابِرِينَ﴾</div>
-      <div class="translation">[Al-Anfal: 46]</div>
+      <div class="translation"><span class="surah">[Al-Anfal: 46]</span> — "Janganlah kalian saling berbantah-bantahan, yang menyebabkan kalian menjadi gentar dan kekuatan kalian hilang. Bersabarlah, sesungguhnya Allah bersama orang-orang yang sabar."</div>
     </div>
-    <div class="prinsip"><i class="fas fa-smile-beam"></i> نَفْرَحُ بِنَجَاحِ إِخْوَانِنَا فِي الدَّعْوَةِ — Kita bergembira atas keberhasilan saudara-saudara kita dalam dakwah.</div>
 
-    <!-- 4 -->
-    <h3><span class="number-badge">4</span> Memperbaiki Kesalahan dengan Nasihat</h3>
-    <div class="quote">وَلَا رَيْبَ أَنَّ كُلَّ وَاحِدٍ مِنَّا مُعَرَّضٌ لِلْخَطَإِ، فَإِذَا رَأَيْنَا مِنْ أَحَدِنَا خَطَأً؛ فَلْنَتَعَاوَنْ عَلَى إِزَالَةِ هَذَا الْخَطَإِ بِالِاتِّصَالِ بِهِ، وَبَيَانِ هَذَا الْخَطَإِ. — "Setiap kita mungkin melakukan kesalahan. Apabila melihat kesalahan, hendaknya bekerja sama menghilangkannya dengan menghubungi dan menjelaskan."</div>
-    <div class="quote">وَقَدْ يَكُونُ الْخَطَأُ خَطَأً فِي ظَنِّنَا، وَلَكِنَّهُ فِي الْوَاقِعِ لَيْسَ بِخَطَإٍ. — "Bisa jadi sesuatu yang kita anggap salah ternyata bukan kesalahan."</div>
+    <div class="prinsip"><i class="fas fa-smile-beam"></i> <span class="arabic-inline" style="font-size: 1.15rem;">نَفْرَحُ بِنَجَاحِ إِخْوَانِنَا فِي الدَّعْوَةِ.</span> — Kita bergembira atas keberhasilan saudara-saudara kita dalam dakwah.</div>
+
+    <!-- 4. ISHLAH KHATA' -->
+    <h3><span class="number-badge">4</span> رَابِعًا: إِصْلَاحُ الْخَطَإِ بِالنَّصِيحَةِ — Memperbaiki Kesalahan dengan Nasihat, Bukan Menjatuhkan</h3>
+
+    <p>Syaikh رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">وَلَا رَيْبَ أَنَّ كُلَّ وَاحِدٍ مِنَّا مُعَرَّضٌ لِلْخَطَإِ، فَإِذَا رَأَيْنَا مِنْ أَحَدِنَا خَطَأً؛ فَلْنَتَعَاوَنْ عَلَى إِزَالَةِ هَذَا الْخَطَإِ بِالِاتِّصَالِ بِهِ، وَبَيَانِ هَذَا الْخَطَإِ.</span>
+      <span class="q-id">"Tidak diragukan bahwa setiap kita mungkin melakukan kesalahan. Apabila kita melihat kesalahan pada salah seorang di antara kita, hendaknya kita bekerja sama untuk menghilangkan kesalahan itu dengan menghubunginya dan menjelaskan kesalahannya."</span>
+    </div>
+
+    <p>Beliau mengingatkan:</p>
+    <div class="quote">
+      <span class="q-ar">وَقَدْ يَكُونُ الْخَطَأُ خَطَأً فِي ظَنِّنَا، وَلَكِنَّهُ فِي الْوَاقِعِ لَيْسَ بِخَطَإٍ.</span>
+      <span class="q-id">"Bisa jadi sesuatu yang kita anggap salah ternyata dalam kenyataannya bukan kesalahan."</span>
+    </div>
+
+    <p><strong>Adab ketika melihat kesalahan saudara:</strong></p>
     <ul class="inline-list">
       <li><i class="fas fa-1"></i> Jangan tergesa-gesa menghakimi.</li>
-      <li><i class="fas fa-2"></i> Pastikan informasi dan pahami persoalan.</li>
+      <li><i class="fas fa-2"></i> Pastikan informasi dan pahami persoalannya.</li>
       <li><i class="fas fa-3"></i> Hubungi dan nasihati dengan baik.</li>
       <li><i class="fas fa-4"></i> Dengarkan penjelasannya.</li>
       <li><i class="fas fa-5"></i> Utamakan perbaikan, bukan menjatuhkan kehormatan.</li>
     </ul>
-    <div class="prinsip"><i class="fas fa-heart"></i> النَّصِيحَةُ لِلْإِصْلَاحِ، لَا لِلْفَضِيحَةِ — Nasihat bertujuan memperbaiki, bukan mempermalukan.</div>
 
-    <!-- 5 -->
-    <h3><span class="number-badge">5</span> Berbeda Pendapat Tidak Harus Berbeda Hati</h3>
-    <div class="quote">فَالْخَطَأُ جَائِزٌ عَلَى غَيْرِكَ، هُوَ جَائِزٌ عَلَيْكَ، وَالصَّوَابُ الَّذِي تَدَّعِيهِ لِنَفْسِكَ يَدَّعِيهِ غَيْرُكَ، وَقَدْ يَكُونُ الصَّوَابُ مَعَ غَيْرِكَ، وَالْخَطَأُ مَعَكَ. — "Kesalahan mungkin terjadi pada orang lain, sebagaimana pada dirimu. Kebenaran yang engkau klaim juga diklaim orang lain. Bisa jadi kebenaran ada pada orang lain dan kesalahan pada dirimu."</div>
-    <p><strong>Contoh peristiwa Bani Quraizhah:</strong> Rasulullah ﷺ bersabda: <span class="arabic-small">لَا يُصَلِّيَنَّ أَحَدٌ الْعَصْرَ إِلَّا فِي بَنِي قُرَيْظَةَ</span> — "Janganlah seorang pun melaksanakan salat Asar kecuali di Bani Quraizhah."</p>
-    <p>Sebagian sahabat memahami tekstual, sebagian memahami maksudnya bersegera. Rasulullah ﷺ tidak mencela salah satu kelompok.</p>
-    <div class="quote">فَلَا يَجُوزُ لِلْإِنْسَانِ أَنْ يَجْعَلَ هَذَا الْخِلَافَ سَبَبًا لِكَرَاهَةِ بَعْضِنَا بَعْضًا. — "Tidak boleh menjadikan perbedaan seperti ini sebagai sebab saling membenci."</div>
-    <div class="prinsip"><i class="fas fa-hand-peace"></i> نَخْتَلِفُ فِي الِاجْتِهَادِ، وَلَا نَتَفَرَّقُ فِي الْأُخُوَّةِ — Kita dapat berbeda dalam ijtihad, tetapi jangan sampai kehilangan persaudaraan.</div>
+    <div class="prinsip"><i class="fas fa-heart"></i> <span class="arabic-inline" style="font-size: 1.15rem;">النَّصِيحَةُ لِلْإِصْلَاحِ، لَا لِلْفَضِيحَةِ.</span> — Nasihat bertujuan memperbaiki, bukan mempermalukan.</div>
 
-    <div class="keyword-box">
-      <span class="keyword"><strong>تَعَاوُنٌ</strong> Kerja sama</span>
-      <span class="keyword"><strong>تَرْكُ الْحَسَدِ</strong> Menjauhi hasad</span>
-      <span class="keyword"><strong>تَشَاوُرٌ</strong> Musyawarah</span>
-      <span class="keyword"><strong>نَصِيحَةٌ</strong> Nasihat</span>
-      <span class="keyword"><strong>أُخُوَّةٌ</strong> Persaudaraan</span>
+    <!-- 5. ADABUL IKHTILAF -->
+    <h3><span class="number-badge">5</span> خَامِسًا: أَدَبُ الِاخْتِلَافِ — Berbeda Pendapat Tidak Harus Berbeda Hati</h3>
+
+    <p>Syaikh رحمه الله berkata:</p>
+    <div class="quote">
+      <span class="q-ar">فَالْخَطَأُ جَائِزٌ عَلَى غَيْرِكَ، هُوَ جَائِزٌ عَلَيْكَ، وَالصَّوَابُ الَّذِي تَدَّعِيهِ لِنَفْسِكَ يَدَّعِيهِ غَيْرُكَ، وَقَدْ يَكُونُ الصَّوَابُ مَعَ غَيْرِكَ، وَالْخَطَأُ مَعَكَ.</span>
+      <span class="q-id">"Kesalahan mungkin terjadi pada orang lain, sebagaimana mungkin terjadi pada dirimu. Kebenaran yang engkau klaim untuk dirimu juga diklaim oleh orang lain. Bisa jadi kebenaran ada pada orang lain dan kesalahan justru ada pada dirimu."</span>
     </div>
 
-    <!-- DOA PENUTUP -->
+    <p><strong>Pelajaran:</strong></p>
+    <ul class="inline-list">
+      <li><i class="fas fa-check"></i> Jangan merasa diri selalu benar.</li>
+      <li><i class="fas fa-check"></i> Jangan fanatik kepada pribadi atau kelompok.</li>
+      <li><i class="fas fa-check"></i> Kembalikan persoalan kepada Al-Qur'an dan Sunnah dengan pemahaman para ulama.</li>
+      <li><i class="fas fa-check"></i> Dalam persoalan ijtihadiyah yang diakui, jagalah adab dan persaudaraan.</li>
+    </ul>
+
+    <p>Contoh perbedaan pemahaman para sahabat terdapat dalam peristiwa Bani Quraizhah, ketika Rasulullah ﷺ bersabda:</p>
+    <div class="quote">
+      <span class="q-ar">لَا يُصَلِّيَنَّ أَحَدٌ الْعَصْرَ إِلَّا فِي بَنِي قُرَيْظَةَ.</span>
+      <span class="q-id">"Janganlah seorang pun melaksanakan salat Asar kecuali di Bani Quraizhah."</span>
+    </div>
+
+    <p>Sebagian sahabat memahami perintah tersebut secara tekstual, sedangkan sebagian lainnya memahami bahwa maksudnya adalah bersegera menuju Bani Quraizhah sehingga mereka tetap salat Asar pada waktunya.</p>
+    <p>Rasulullah ﷺ tidak mencela salah satu kelompok dari mereka.</p>
+
+    <p>Syaikh mengambil pelajaran:</p>
+    <div class="quote">
+      <span class="q-ar">فَلَا يَجُوزُ لِلْإِنْسَانِ أَنْ يَجْعَلَ هَذَا الْخِلَافَ سَبَبًا لِكَرَاهَةِ بَعْضِنَا بَعْضًا.</span>
+      <span class="q-id">"Tidak boleh seseorang menjadikan perbedaan seperti ini sebagai sebab sebagian kita membenci sebagian yang lain."</span>
+    </div>
+
+    <div class="prinsip"><i class="fas fa-hand-peace"></i> <span class="arabic-inline" style="font-size: 1.15rem;">نَخْتَلِفُ فِي الِاجْتِهَادِ، وَلَا نَتَفَرَّقُ فِي الْأُخُوَّةِ.</span> — Kita dapat berbeda dalam ijtihad, tetapi jangan sampai kehilangan persaudaraan.</div>
+
+    <div class="keyword-box">
+      <span class="keyword"><span class="ar-inline">تَعَاوُنٌ</span> — Kerja sama</span>
+      <span class="keyword"><span class="ar-inline">تَرْكُ الْحَسَدِ</span> — Menjauhi hasad</span>
+      <span class="keyword"><span class="ar-inline">تَشَاوُرٌ</span> — Musyawarah</span>
+      <span class="keyword"><span class="ar-inline">نَصِيحَةٌ</span> — Nasihat</span>
+      <span class="keyword"><span class="ar-inline">أُخُوَّةٌ</span> — Persaudaraan</span>
+    </div>
+
+    <hr>
+
+    <!-- ===== DOA PENUTUP ===== -->
+    <h2 style="border-bottom: none; justify-content: center; font-size: 1.4rem;"><i class="fas fa-hands-praying"></i> الدُّعَاءُ وَالْخِتَامُ</h2>
+
     <div class="dua">
-      <div class="arabic">اللَّهُمَّ أَلِّفْ بَيْنَ قُلُوبِنَا، وَأَصْلِحْ ذَاتَ بَيْنِنَا، وَاهْدِنَا سُبُلَ السَّلَامِ</div>
+      <div class="arabic">اللَّهُمَّ أَلِّفْ بَيْنَ قُلُوبِنَا، وَأَصْلِحْ ذَاتَ بَيْنِنَا، وَاهْدِنَا سُبُلَ السَّلَامِ.</div>
       <p>"Ya Allah, satukanlah hati-hati kami, perbaikilah hubungan di antara kami, dan tunjukilah kami jalan-jalan keselamatan."</p>
-      <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem;">وَاللهُ الْمُوَفِّقُ إِلَى سَوَاءِ السَّبِيلِ — Allah-lah yang memberikan taufik menuju jalan yang lurus.</p>
+      <p style="font-size: 0.95rem; opacity: 0.85; margin-top: 0.8rem;">وَاللهُ الْمُوَفِّقُ إِلَى سَوَاءِ السَّبِيلِ</p>
+      <p style="font-size: 0.9rem; opacity: 0.75;">Allah-lah yang memberikan taufik menuju jalan yang lurus.</p>
     </div>
 
     <div class="footer-note">
@@ -533,4 +779,3 @@
   </div>
 </body>
 </html>
-```
